@@ -1,13 +1,20 @@
 class StudentModel {
-  final int id;
+  final int? id;
   final String name;
   final String address;
-  final String phone;
+  final int phone;
 
   StudentModel({
-    required this.id,
+    this.id,
     required this.name,
     required this.address,
     required this.phone,
   });
+
+  Map<String, dynamic> toMap() => {
+        'id': id,
+        'name': name,
+        'address': address,
+        'phone': phone,
+      };
 }

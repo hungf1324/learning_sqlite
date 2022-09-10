@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:learning_sqlite/pages/add_student.dart';
-import 'package:learning_sqlite/pages/edit_student.dart';
-import 'package:learning_sqlite/pages/manage_student.dart';
+import 'pages/add_student.dart';
+import 'pages/edit_student.dart';
+import 'pages/manage_student.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
