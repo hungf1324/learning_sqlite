@@ -33,6 +33,9 @@ class EditStudent extends StatelessWidget {
           addressController: addressController,
           phoneController: phoneController,
           onPressed: () {
+            student.name = nameController.text;
+            student.address = addressController.text;
+            student.phone = phoneController.text;
             sqliteController.updateStudent(student);
             Navigator.pop(context);
           },

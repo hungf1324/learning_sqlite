@@ -30,7 +30,7 @@ class AddStudent extends StatelessWidget {
               StudentModel(
                 name: nameController.text,
                 address: addressController.text,
-                phone: int.parse(phoneController.text),
+                phone: phoneController.text,
               ),
             );
             Navigator.pop(context);

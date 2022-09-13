@@ -16,13 +16,13 @@ class SQLiteController {
     );
 
     database.execute(
-      'CREATE TABLE IF NOT EXISTS $TABLE_NAME(id INTEGER PRIMARY KEY AUTOINCREMENT,name Text, address Text, phone INTEGER)',
+      'CREATE TABLE IF NOT EXISTS $TABLE_NAME(id INTEGER PRIMARY KEY AUTOINCREMENT,name Text, address Text, phone Text)',
     );
   }
 
   Future<void> insertStudent(StudentModel student) async {
     await database.rawInsert(
-      'INSERT INTO $TABLE_NAME (NAME,ADDRESS,PHONE) VALUES(\'${student.name}\',\'${student.address}\',${student.phone})',
+      'INSERT INTO $TABLE_NAME (NAME,ADDRESS,PHONE) VALUES(\'${student.name}\',\'${student.address}\',\'${student.phone}\')',
     );
   }
 
@@ -48,7 +48,6 @@ class SQLiteController {
       where: 'id = ?',
       whereArgs: [student.id],
     );
-    print(student.toMap());
   }
 
   Future<void> deleteStudent(int? id) async {

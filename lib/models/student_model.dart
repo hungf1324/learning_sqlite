@@ -1,8 +1,8 @@
 class StudentModel {
   final int? id;
-  final String name;
-  final String address;
-  final int phone;
+  String name;
+  String address;
+  String phone;
 
   StudentModel({
     this.id,
